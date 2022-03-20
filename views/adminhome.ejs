@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/39de285129.js" crossorigin="anonymous"></script>
   <title>Admin-The Fashioner</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 
@@ -271,6 +275,7 @@ header #menu-btn:hover {
   }
   
   .header .navbar {
+    text-decoration: none;
     position: absolute;
     top: 99%;
     left: 0;
@@ -289,6 +294,7 @@ header #menu-btn:hover {
     display: block;
     margin: 2rem;
     text-align: center;
+    text-decoration: none;
   }
   
   .services .services-box {
@@ -309,119 +315,7 @@ header #menu-btn:hover {
  body {
 	 background: white;
 }
- .card-box {
-	 overflow: hidden;
-	 position: relative;
-	 padding: 45px;
-	 box-sizing: border-box;
-	 width: 280px;
-	 height: 400px;
-	 background-image: url('https://images.unsplash.com/photo-1606087492572-424ebe0f2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW4lMjBiaWtlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
-	 background-position: center;
-	 background-size: cover;
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 justify-content: center;
-	 transition: 0.3s ease;
-}
- .card-box:hover {
-	 background-position-y: 10%;
-	 filter: drop-shadow(-9px 16px 0px #343331);
-}
- .card-box:hover > .card-info {
-	 top: 50%;
-	 margin-top: 35px;
-}
- .card-box:hover > .card-text {
-	 top: 0;
-	 width: 100%;
-	 text-shadow: 5px 5px 10px rgba(36, 35, 35, 0.13);
-	 background-color: #c06200;
-}
- .card-box:hover > .card-text > .heading {
-	 text-shadow: none;
-}
- .card-box:hover > .card-text > .para {
-	 text-shadow: none;
-}
- .card-box .card-text {
-	 transition: 0.1s ease;
-	 margin-bottom: 25px;
-	 position: absolute;
-	 color: white;
-	 text-align: center;
-	 font-family: 'Anton', sans-serif;
-	 padding: 7px 5px;
-}
- .card-box .card-text .heading {
-	 font-size: 35px;
-	 text-shadow: 3px 10px 14px #151515;
-}
- .card-box .card-text .para {
-	 font-size: 20px;
-	 text-shadow: 3px 10px 14px #151515;
-}
- .card-box .card-info {
-	 transition: 0.3s ease;
-	 bottom: -50%;
-	 position: absolute;
-	 width: 100%;
-	 text-align: center;
-}
- .card-box .card-info .info-para {
-	 color: white;
-	 text-shadow: -2px 0px 11px #151515;
-}
- .card-box .card-info button {
-	 padding: 7px 18px;
-	 border: none;
-	 background-color: #ff8107;
-	 margin-top: 25px;
-}
- .card-box .card-info button:hover {
-	 color: white;
-	 background-color: #c06200;
-}
- .card-section {
-	 margin-top: 45px;
-	 padding: 7px 18px;
-	 flex-wrap: wrap;
-	 width: 100%;
-	 display: flex;
-	 justify-content: center;
-	 gap: 25px;
-}
- .card-box:nth-child(2) {
-	 background-image: url('https://images.unsplash.com/photo-1565992441121-4367c2967103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80');
-}
- .card-box:nth-child(2):hover > .card-text {
-	 top: 0;
-	 width: 100%;
-	 text-shadow: 5px 5px 10px rgba(36, 35, 35, 0.13);
-	 background-color: #0d7ded;
-}
- .card-box:nth-child(2) .card-info > button {
-	 background-color: #0d7ded;
-}
- .card-box:nth-child(2) .card-info > button:hover {
-	 background-color: #0b6cca;
-}
- .card-box:nth-child(3) {
-	 background-image: url('https://images.unsplash.com/photo-1626826792954-a1c68aeca425?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
-}
- .card-box:nth-child(3):hover > .card-text {
-	 top: 0;
-	 width: 100%;
-	 text-shadow: 5px 5px 10px rgba(36, 35, 35, 0.13);
-	 background-color: #0e9b06;
-}
- .card-box:nth-child(3) .card-info > button {
-	 background-color: #0e9b06;
-}
- .card-box:nth-child(3) .card-info > button:hover {
-	 background-color: #0b7604;
-}
+ 
  
  
 </style>
@@ -433,88 +327,102 @@ header #menu-btn:hover {
      
       
       <nav class="navbar">
-        <a href="#header">home</a>
-        <a href="#services">services</a>
-        <a href="#about">about us</a>
-        <a href="#contact">contact</a>
+        <a href="#header" style="text-decoration: none;">home</a>
+        <a href="#services" style="text-decoration: none;">Filter</a>
+        <a href="#about"  data-toggle="modal" data-target="#myModal" style="text-decoration: none;">Add Product</a>
+  
+        <a href="#contact" style="text-decoration: none;">Profile</a>
       </nav>
       
       <div id="menu-btn" class="fa-solid fa-bars fa-2x">
       </div>
     </header>
-  
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-heading">
-      Motivated web solutions.
-      </h1>
-      <p>Best websites for developing companies.
-      </p>
-    </div>
-  </section>
-  
 
-  <section class="services" id="services">
-    <h1>our Products</h1>
-    <div class='card-section'>
-        <div class='card-box'>
-      <div class='card-text'>
-        <div class='heading'>Card Title</div>
-        <div class='para'>Some Text</div>
-      </div>
-      <div class='card-info'>
-        <div class='info-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem ipsum, viverra non gravida a. </div>
-         <button class='card-btn'>Find More</button>
-      </div>
-      </div>
-      
-      
-         <div class='card-box'>
-      <div class='card-text'>
-        <div class='heading'>Card Title</div>
-        <div class='para'>Some Text</div>
-      </div>
-      <div class='card-info'>
-        <div class='info-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem ipsum, viverra non gravida a. </div>
-         <button class='card-btn'>Find More</button>
-      </div>
-      </div>
     
+    <div class="container">
       
-      
-          <div class='card-box'>
-      <div class='card-text'>
-        <div class='heading'>Card Title</div>
-        <div class='para'>Some Text</div>
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title w-100 text-center">Add Product</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <!-- adding Bootstrap Form here -->
+
+                      <form id="myForm" class="needs-validation" novalidate>
+                          <div class="container">
+
+                              <div class="form-group row">
+                                  <label for="id" class="col-sm-2 col-form-label">Name</label>
+                                  <div class="col-sm-10">
+                                      <input type="text" class="form-control" id="name_id" name="Name"
+                                          placeholder="Enter your Name" required />
+                                          <div class="invalid-feedback">
+                                              Please choose a Name.
+                                            </div>
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                  <label for="validationCustomUsername"  class="col-sm-2 col-form-label">Username</label>
+                                  <div class="input-group col-sm-10">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="username_id" name="Username" placeholder="Enter your Username" aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                              </div>
+
+                                <div class="form-group row">
+                                  <label for="id" class="col-sm-2 col-form-label">Password</label>
+                                  <div class="col-sm-10">
+                                      <input type="password" class="form-control" id="password_id" name="Password"
+                                          placeholder="Enter your Password" required />
+                                          <div class="invalid-feedback">
+                                              Please choose a Password.
+                                            </div>
+                                  </div>
+                                 </div>
+
+                               <div class="text-center">
+                               <button class="btn btn-success" type="submit">ADD</button>
+                               </div>
+                          </div>
+                      </form>
+
+                      <script>
+                         
+                      </script>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+
+              </div>
+          </div>
       </div>
-      <div class='card-info'>
-        <div class='info-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem ipsum, viverra non gravida a. </div>
-         <button class='card-btn'>Find More</button>
-      </div>
-      </div>
-      
-    </div>
+
+       <br><br>
     
-    
-  </section>
- 
+
+
+
+  </div>
   
-  <section class="about" id="about">
-      <div class="about-content">
-        <div class="about-text">
-          <h1>
-            about us
-          </h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, assumenda. Explicabo sint dolores quo corrupti, dolore nesciunt eveniet. Nihil sint odit voluptatibus sapiente sequi hic voluptas illum nemo asperiores minus!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis dolore commodi temporibus vero quaerat totam amet nobis reprehenderit omnis? Totam optio consequatur ut alias nemo, nihil enim voluptate id.</p>
-          <a href="#" class="btn">join us</a>
-        </div>
-        <div class="about-img">
-          <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-        </div>
-      </div>
-  </section>
-  
+    
   
     
   
