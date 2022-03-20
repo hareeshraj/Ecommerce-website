@@ -61,7 +61,7 @@ header .logo i {
   margin-right: .5rem;
 }
 
-header .navbar a {
+header .nave a {
   color: #EDF2F4;
   text-transform: uppercase;
   font-size: .8rem;
@@ -70,7 +70,7 @@ header .navbar a {
   font-weight: bold;
 }
 
-header .navbar a:hover {
+header .nave a:hover {
   color: #D90429;
   background: #EDF2F4;
 }
@@ -143,7 +143,7 @@ header #menu-btn:hover {
 .services .services-box .box {
   display: flex;
   justify-content: space-between;
-  aling-items: center;
+  align-items: center;
   padding: 1rem 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   align-self: normal;
@@ -274,8 +274,7 @@ header #menu-btn:hover {
     transform: rotate(180deg);
   }
   
-  .header .navbar {
-    text-decoration: none;
+  .header .nave {
     position: absolute;
     top: 99%;
     left: 0;
@@ -286,15 +285,14 @@ header #menu-btn:hover {
     clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0);
   }
   
-  .header .navbar.active {
+  .header .nave.active {
     clip-path: polygon(100% 0, 52% 0, 0 0, 0 100%, 100% 100%);
   }
   
-  .header .navbar a {
+  .header .nave a {
     display: block;
     margin: 2rem;
     text-align: center;
-    text-decoration: none;
   }
   
   .services .services-box {
@@ -310,33 +308,240 @@ header #menu-btn:hover {
     flex-direction: column;
   }
 }
-/* //products */
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
- body {
-	 background: white;
+/* card */
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+} */
+/* 
+.con{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 320px; 
+    height: 450px;
+    margin: 1rem;
+    background-position: center;
+    box-shadow: 2px 8px 6px #1b1b1b;
+    overflow: hidden;
+} 
+.card{   
+    position: absolute;
+    width:  100%;
+    top: 35rem;
+    height: 40%;
+    color: #d6d6d6;
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    transition: all .5s ease; 
+} 
+
+ .con:hover .card{
+    top: 17rem;
+    
+} 
+
+.text{
+    font-size: 20px;
+    transition: all .5s ease; 
+        color:#17202A  ;
+    text-shadow: 2px 2px white;
+}
+h5{
+    color:#17202A  ;
+    text-shadow: 2px 2px white;
+}
+h6{
+  color:#17202A  ;
+  text-shadow: 2px 2px white;
+}
+button{
+    padding: .5rem;
+    background: #000000;
+    border: none;
+    color: #fff;
+    margin: 1rem;
+    cursor: pointer;
+} */
+/* .grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 175px;
+  align-items: stretch;
+  column-gap: 190px;
+  margin-right: 50px;
+  /* margin-left: 50px; */
  
- 
- 
+
+/* } */ 
+ .item
+ {
+   margin-left:200px;;
+ }
+ @media only screen and (max-width: 600px)  {
+  .item{
+    margin-left:0px; 
+  }
+} */
+ /* new card */
+/*----  Main Style  ----*/
+#cards_landscape_wrap-2{
+  text-align: center;
+  background: #F7F7F7;
+}
+#cards_landscape_wrap-2 .container{
+  padding-top: 80px; 
+  padding-bottom: 100px;
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  
+  width: 100%;
+  height: 200px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #5D6D7E;
+}
 </style>
 </head>
 <body>
   
     <header class="header" id="header">
-      <a href="#header" class="logo"><i class="fas fa-mask"></i>The Fashioner</a>
+      <a href="#header" class="logo" style="text-decoration: none;"><i class="fas fa-mask" ></i>The Fashioner</a>
      
       
-      <nav class="navbar">
+      <nav class="nave">
         <a href="#header" style="text-decoration: none;">home</a>
         <a href="#services" style="text-decoration: none;">Filter</a>
         <a href="#about"  data-toggle="modal" data-target="#myModal" style="text-decoration: none;">Add Product</a>
   
-        <a href="#contact" style="text-decoration: none;">Profile</a>
+        <a href="/" style="text-decoration: none;">Logout</a>
       </nav>
       
       <div id="menu-btn" class="fa-solid fa-bars fa-2x">
       </div>
     </header>
+
+<!--    
+    <div class="item">
+      <div class="row row-cols-md-1 row-cols-md-4 g-1" >
+        <% detail.forEach(function(name){%>
+          <div class="con">
+           <img src="data:<%=name.fileExt%>;base64,<%=name.base64Code%>" alt=" " width="100%" height="100%">
+           <div class="card">
+               <span class="text"><%=name.pname%></span>
+               <h5><%=name.desc%></h5>
+               <h6>Size:<%=name.size%></h6>
+               <h6>Price:₹<%=name.price%></h6>
+               <button>BUY</button>
+           </div>
+       </div>
+         <%});%>
+      </div>
+    </div> -->
+
+
+           <!-- Topic Cards -->
+    <div id="cards_landscape_wrap-2">
+        <div class="container">
+            <div class="row">
+              <% detail.forEach(function(name){%>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a href="">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                  <img src="data:<%=name.fileExt%>;base64,<%=name.base64Code%>" alt=" " width="100%" height="100%">
+                                </div>
+                                <div class="text-container">
+                                    <h5 style="color:#28B463 ;"><%=name.pname%></h5>
+                                   <h5 style="color:#ABB2B9;"><%=name.desc%></h5>
+                                   <h5 style="color:#5D6D7E ;">Size-<%=name.size%></h5>
+                                   <h5 style="color:#1C2833;" >₹<%=name.price%></h5>
+                                   <button class="btn btn-success">BUY</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              <%});%>
+
+            </div>
+        </div>
+    </div>
 
     
     <div class="container">
@@ -357,27 +562,71 @@ header #menu-btn:hover {
                   <div class="modal-body">
                       <!-- adding Bootstrap Form here -->
 
-                      <form id="myForm" class="needs-validation" novalidate>
+                      <form id="myForm" class="needs-validation" action="/addproduct"  method="post" enctype="multipart/form-data">
                           <div class="container">
 
                               <div class="form-group row">
-                                  <label for="id" class="col-sm-2 col-form-label">Name</label>
-                                  <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="name_id" name="Name"
-                                          placeholder="Enter your Name" required />
+                                
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" id="name_id" name="productname"
+                                          placeholder="Product name" required />
                                           <div class="invalid-feedback">
                                               Please choose a Name.
                                             </div>
                                   </div>
                               </div>
 
-                              <div class="form-group row">
-                                  <label for="validationCustomUsername"  class="col-sm-2 col-form-label">Username</label>
-                                  <div class="input-group col-sm-10">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <div class="form-group row">
+                                  
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="name_id" name="description"
+                                            placeholder="description" required />
+                                            <div class="invalid-feedback">
+                                                Please choose a Name.''
+                                              </div>
                                     </div>
-                                    <input type="text" class="form-control" id="username_id" name="Username" placeholder="Enter your Username" aria-describedby="inputGroupPrepend" required>
+                                </div>
+                                
+                                <div class="form-group row">
+                                 
+                                    <div class="col-sm-12">
+                                      <select name="productgroup" class="form-control" id="sel1" placeholder="Size">
+                                        <option default>--Product Group--</option>
+                                        <option>Mens</option>
+                                        <option>Womens</option>
+                                        <option>Kids</option>
+                                        
+                                      </select>
+                                            <div class="invalid-feedback">
+                                                Please choose a Name.
+                                              </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="name_id" name="price"
+                                            placeholder="Price" required />
+                                            <div class="invalid-feedback">
+                                                Please choose a Name.
+                                              </div>
+                                    </div>
+                                </div>
+
+                              <div class="form-group row">
+                                  
+                                  <div class="input-group col-sm-12">
+                                    <div class="input-group-prepend">
+                                     
+                                    </div>
+                                    <select name="size" class="form-control" id="sel1" placeholder="Size">
+                                      <option default>--Size--</option>
+                                      <option>S</option>
+                                      <option>M</option>
+                                      <option>L</option>
+                                      <option>XL</option>
+                                    </select>
                                     <div class="invalid-feedback">
                                       Please choose a username.
                                     </div>
@@ -385,10 +634,9 @@ header #menu-btn:hover {
                               </div>
 
                                 <div class="form-group row">
-                                  <label for="id" class="col-sm-2 col-form-label">Password</label>
-                                  <div class="col-sm-10">
-                                      <input type="password" class="form-control" id="password_id" name="Password"
-                                          placeholder="Enter your Password" required />
+                                 
+                                  <div class="col-sm-12">
+                                    <input type="file" name="file" class="form-control-file border">
                                           <div class="invalid-feedback">
                                               Please choose a Password.
                                             </div>
@@ -396,7 +644,7 @@ header #menu-btn:hover {
                                  </div>
 
                                <div class="text-center">
-                               <button class="btn btn-success" type="submit">ADD</button>
+                               <button class="btn btn-success" type="submit">Add</button>
                                </div>
                           </div>
                       </form>
@@ -406,10 +654,10 @@ header #menu-btn:hover {
                       </script>
                   </div>
 
-                  <!-- Modal footer -->
+                  <!-- Modal footer
                   <div class="modal-footer">
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                  </div>
+                  </div> -->
 
               </div>
           </div>
@@ -430,11 +678,11 @@ header #menu-btn:hover {
 </body>
 <script>
     const menu = document.querySelector('#menu-btn');
-const navbar = document.querySelector('.header .navbar');
+const nave = document.querySelector('.header .nave');
 
 menu.onclick = () => {
   menu.classList.toggle('fa-times');
-  navbar.classList.toggle('active');
+  nave.classList.toggle('active');
 }
 </script>
 </html>
