@@ -402,7 +402,7 @@ button{
   background: #F7F7F7;
 }
 #cards_landscape_wrap-2 .container{
-  padding-top: 80px; 
+  padding-top: 0px; 
   padding-bottom: 100px;
 }
 #cards_landscape_wrap-2 a{
@@ -475,6 +475,14 @@ button{
   letter-spacing: 1px;
   color: #5D6D7E;
 }
+.card-btn{
+  display:flex;
+  align-items:space-between; 
+  justify-content:center;
+  /* flex-wrap: wrap; */
+  width:100%;
+  /* background-color: blue; */
+}
 </style>
 </head>
 <body>
@@ -531,11 +539,23 @@ button{
                                    <h5 style="color:#ABB2B9;"><%=name.desc%></h5>
                                    <h5 style="color:#5D6D7E ;">Size-<%=name.size%></h5>
                                    <h5 style="color:#1C2833;" >₹<%=name.price%></h5>
-                                   <button class="btn btn-success">BUY</button>
+                                  <span>
+                                    <div class="card-btn">
+                                      <form method="post" action="/deleteproduct">
+                                        <button class="btn btn-danger" name="product_id" value="<%=name._id%>">Delete</button> 
+                                        <a name="product_id"  onclick="updateproduct('<%=name._id%>','<%=name.pname%>','<%=name.desc%>','<%=name.size%>','<%=name.price%>','<%=name.pgroup%>')" class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a>
+                                      </form>
+                                         
+                                    </div>
+                                   
+                                
+                                  </span>
+                                   <i class="glyphicon glyphicon-edit" style="font-size:40px"></i>
                                 </div>
                             </div>
                         </div>
                     </a>
+                    
                 </div>
               <%});%>
 
@@ -544,6 +564,146 @@ button{
     </div>
 
     
+    <div class="container">
+      
+
+      <!-- The Modal -->
+      <div class="modal" id="updateModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title w-100 text-center">Update Product</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <!-- adding Bootstrap Form here -->
+
+                      <form id="myForm" class="needs-validation" action="/updateproduct"  method="post" enctype="multipart/form-data">
+                          <div class="container">
+
+                              <div class="form-group row">
+                                
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" id="productname" name="productname"
+                                          placeholder="Product name" required />
+                                          <div class="invalid-feedback">
+                                              Please choose a Name.
+                                            </div>
+                                  </div>
+                              </div>
+
+                                <div class="form-group row">
+                                  
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="desc" name="description"
+                                            placeholder="description" required />
+                                            <div class="invalid-feedback">
+                                                Please choose a Name.''
+                                              </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                 
+                                    <div class="col-sm-12">
+                                      <select name="productgroup" id="types" class="form-control"  placeholder="Size">
+                                        <option selected>--Product Group--</option>
+                                        <option >Mens</option>
+                                        <option > Womens</option>
+                                        <option >Kids</option>
+                                      </select>
+
+                                            <div class="invalid-feedback">
+                                                Please choose a Name.
+                                              </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="price" name="price"
+                                            placeholder="Price" required />
+                                            <div class="invalid-feedback">
+                                                Please choose a Name.
+                                              </div>
+                                    </div>
+                                </div>
+
+                              <div class="form-group row">
+                                  
+                                  <div class="input-group col-sm-12">
+                                    <div class="input-group-prepend">
+                                     
+                                    </div>
+                                    <select name="size" class="form-control"  placeholder="Size">
+                                      <option selected id="size">--Size--</option>
+                                      <option >S</option>
+                                      <option>M</option>
+                                      <option>L</option>
+                                      <option>XL</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                              </div>
+
+                                <div class="form-group row">
+                                 
+                                  <div class="col-sm-12">
+                                    <input type="file" name="file" class="form-control-file border">
+                                          <div class="invalid-feedback">
+                                              Please choose a Password.
+                                            </div>
+                                  </div>
+                                 </div>
+                                 <div class="form-group row">
+                                 
+                                  <div class="form-group row">
+                                  
+                                    <div class="col-sm-12">
+                                        <input type="hidden" class="form-control" id="pid" name="product_id"
+                                            placeholder="description" required />
+                                            <div class="invalid-feedback">
+                                                Please choose a Name.''
+                                              </div>
+                                    </div>
+                                </div>
+                                 </div>
+                               <div class="text-center">
+                               <button class="btn btn-success" type="submit">Update</button>
+                               </div>
+                               
+                          </div>
+                      </form>
+
+                      <script>
+                         
+                      </script>
+                  </div>
+
+                  <!-- Modal footer
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div> -->
+
+              </div>
+          </div>
+      </div>
+
+       <br><br>
+    
+
+
+
+  </div>
+  
+
     <div class="container">
       
 
@@ -684,5 +844,26 @@ menu.onclick = () => {
   menu.classList.toggle('fa-times');
   nave.classList.toggle('active');
 }
+
+//update modal
+function updateproduct(id,product,desc,size,price,type)
+{
+  const product_id=id;
+  console.log(product_id);
+  console.log(type);
+  const productname=document.getElementById("productname");
+  const des=document.getElementById("desc");
+  const type1=document.getElementById("types");
+  const size1=document.getElementById("size");
+  const price1=document.getElementById("price");
+  const pid=document.getElementById("pid");
+  pid.value=id;
+  productname.value=product;
+  des.value=desc;
+  // size1.value=size;
+  // type1.value=desc;
+  price1.value=price;
+}
+
 </script>
 </html>

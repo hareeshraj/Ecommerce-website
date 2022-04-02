@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+  font-family: 'Arvo', serif;
+  transition: all .3s linear;
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 1rem 5%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #2B2D42;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+header .logo {
+  color: #8D99AE;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header .logo i {
+  color: #EF233C;
+  margin-right: .5rem;
+}
+
+header .nave a {
+  color: #EDF2F4;
+  text-transform: uppercase;
+  font-size: .8rem;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  font-weight: bold;
+}
+
+header .nave a:hover {
+  color: #D90429;
+  background: #EDF2F4;
+}
+
+header #menu-btn {
+  display: none;
+  color: #EF233C;
+  cursor: pointer;
+}
+
+header #menu-btn:hover {
+  color: #EDF2F4;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80') center center/cover;
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-content {
+  text-align: center;
+  z-index: 500;
+}
+
+.hero .hero-content .hero-heading {
+  font-size: 3rem;
+  color: #EDF2F4;
+  text-transform: uppercase;
+}
+
+.hero .hero-content p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #EF233C;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+}
+
+.services {
+  padding-bottom: 3rem;
+}
+
+.services h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.services .services-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.services .services-box .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  align-self: normal;
+  background:  #fff;
+}
+
+.services .services-box .box:hover  {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.services .services-box .box .box-content h3 {
+  margin-bottom: .5rem;
+}
+
+.services .services-box .box i {
+  margin-right: 1.5rem;
+  color: #D90429;
+}
+
+.about {
+  background: #2B2D42;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.about .about-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.about .about-content .about-text {
+  flex: 1 1 50%;
+}
+
+.about .about-content .about-text h1 {
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: .5rem;
+  font-size: 2rem;
+}
+
+.about .about-content .about-text p {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.about .about-content .about-text a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #8D99AE;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  color: #EDF2F4;
+  text-transform: uppercase;
+}
+
+.about .about-content .about-text a:hover {
+  background: #D90429;
+  letter-spacing: .5rem;
+}
+
+.about .about-content .about-img {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .about-content .about-img img {
+  width: 90%;
+  border-radius: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.contact {
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: url('https://images.unsplash.com/photo-1543191878-f6a3e470454e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+}
+
+.contact h1 {
+  text-transform: capitalize;
+}
+
+.contact .contact-left {
+  flex: 1 1 50%;
+  background: #D90429;
+}
+
+.contact .contact-left input {
+  border: 1px solid grey;
+  display: block; 
+  margin: 1rem 0;
+}
+
+.contact .contact-left textarea {
+  border: 1px solid grey;
+  margin-bottom: 1rem;
+}
+
+.contact .contact-right {
+  flex: 1 1 50%;
+  background: #EDF2F4;
+}
+
+
+
+
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 85%;
+  }
+  
+  
+}
+
+@media (max-width: 768px) {
+  header #menu-btn {
+  display: inline-block;
+}
+  
+  header #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  
+  .header .nave {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #2B2D42;
+    border-top: 1px solid #8D99AE;
+    padding: 2rem;
+    clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0);
+  }
+  
+  .header .nave.active {
+    clip-path: polygon(100% 0, 52% 0, 0 0, 0 100%, 100% 100%);
+  }
+  
+  .header .nave a {
+    display: block;
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .services .services-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .about .about-content {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+/* card */
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+} */
+/* 
+.con{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 320px; 
+    height: 450px;
+    margin: 1rem;
+    background-position: center;
+    box-shadow: 2px 8px 6px #1b1b1b;
+    overflow: hidden;
+} 
+.card{   
+    position: absolute;
+    width:  100%;
+    top: 35rem;
+    height: 40%;
+    color: #d6d6d6;
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    transition: all .5s ease; 
+} 
+
+ .con:hover .card{
+    top: 17rem;
+    
+} 
+
+.text{
+    font-size: 20px;
+    transition: all .5s ease; 
+        color:#17202A  ;
+    text-shadow: 2px 2px white;
+}
+h5{
+    color:#17202A  ;
+    text-shadow: 2px 2px white;
+}
+h6{
+  color:#17202A  ;
+  text-shadow: 2px 2px white;
+}
+button{
+    padding: .5rem;
+    background: #000000;
+    border: none;
+    color: #fff;
+    margin: 1rem;
+    cursor: pointer;
+} */
+/* .grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 175px;
+  align-items: stretch;
+  column-gap: 190px;
+  margin-right: 50px;
+  /* margin-left: 50px; */
+ 
+
+/* } */ 
+ .item
+ {
+   margin-left:200px;;
+ }
+ @media only screen and (max-width: 600px)  {
+  .item{
+    margin-left:0px; 
+  }
+} */
+ /* new card */
+/*----  Main Style  ----*/
+#cards_landscape_wrap-2{
+  text-align: center;
+  background: #F7F7F7;
+}
+#cards_landscape_wrap-2 .container{
+  padding-top: 0px; 
+  padding-bottom: 100px;
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  
+  width: 100%;
+  height: 200px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #5D6D7E;
+}
+.card-btn{
+  display:flex;
+  align-items:space-between; 
+  justify-content:center;
+  /* flex-wrap: wrap; */
+  width:100%;
+  /* background-color: blue; */
+}
+</style>
+</head>
+<body>
+    
+    <header class="header" id="header">
+        <a href="#header" class="logo" style="text-decoration: none;"><i class="fas fa-mask" ></i>The Fashioner</a>
+       
+        
+        <nav class="nave">
+          <a href="/home" style="text-decoration: none;">home</a>
+          <a href="#services" style="text-decoration: none;">Filter</a>
+          <a href="/" style="text-decoration: none;">Logout</a>
+        </nav>
+        
+        <div id="menu-btn" class="fa-solid fa-bars fa-2x">
+        </div>
+      </header>
+    
+           <!-- Topic Cards -->
+           <div id="cards_landscape_wrap-2">
+            <div class="container">
+                <div class="row">
+                  <% detail.forEach(function(name){%>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a href="">
+                            <div class="card-flyer">
+                                <div class="text-box">
+                                    <div class="image-box">
+                                      <img src="data:<%=name.fileExt%>;base64,<%=name.base64Code%>" alt=" " width="100%" height="100%">
+                                    </div>
+                                    <div class="text-container">
+                                        <h5 style="color:#28B463 ;"><%=name.pname%></h5>
+                                       <h5 style="color:#ABB2B9;"><%=name.desc%></h5>
+                                       <h5 style="color:#5D6D7E ;">Size-<%=name.size%></h5>
+                                       <h5 style="color:#1C2833;" >₹<%=name.price%></h5>
+                                      <span>
+                                        <div class="card-btn">
+                                          <form method="post" action="">
+                                            <button class="btn btn-success" name="buy" value="<%=name._id%>">Buy</button> 
+                                            
+                                          </form>
+                                             
+                                        </div>
+                                       
+                                    
+                                      </span>
+                                       <i class="glyphicon glyphicon-edit" style="font-size:40px"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                  <%});%>
+    
+                </div>
+            </div>
+        </div>
+
+
+</body>
+</html>

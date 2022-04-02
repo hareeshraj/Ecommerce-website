@@ -99,6 +99,7 @@ app.post("/usersignup",function(req,res)
 
 
 });
+
 app.post("/usersignin",function(req,res)
 {
     const email=req.body.email;
@@ -208,7 +209,85 @@ app.post("/addproduct",upload.single('file'),function (req,res)
     productdata.save();
    res.redirect("/adminhome");
 });
+app.post("/deleteproduct",function(req,res)
+{
+    const product_id=req.body.product_id;
+    console.log(product_id);
+    product.deleteOne({_id:product_id},function(err)
+    {
+        if(!err)
+        {
+            res.redirect("/adminhome");
+        }
 
+    });
+
+});
+app.post("/updateproduct",upload.single('file'),function(req,res)
+{
+    const product_id=req.body.product_id;
+    console.log(product_id);
+    const file=req.file;
+    let temp = fs.readFileSync(file.path);
+    // console.log(file.filename);
+    const pname=req.body.productname;
+    const desc =req.body.description;
+    const group=req.body.productgroup;
+    const price=req.body.price;
+    const size=req.body.size;
+  
+    // console.log(pname+" "+desc+" "+group+" "+price+" "+size+" "+file);
+ 
+   product.updateOne({_id:product_id},{pname:pname,desc:desc,pgroup:group,price:price,size:size, file:file.originalname,fileExt: file.mimetype, base64Code: temp.toString('base64')},function(err)
+   {
+       if(!err)
+       {
+        res.redirect("/adminhome");
+       }
+
+   });
+});
+app.get("/home",function(req,res)
+{
+    res.render("home",{});
+
+});
+app.get("/mens",function(req,res)
+{
+    product.find({pgroup:"Mens"},function(err,found)
+    {
+        if(!err)
+        {
+            res.render("mens",{detail:found});
+        }
+    });
+   
+
+});
+
+app.get("/womens",function(req,res)
+{
+    product.find({pgroup:"Womens"},function(err,found)
+    {
+        if(!err)
+        {
+            res.render("womens",{detail:found});
+        }
+    });
+
+});
+app.get("/kids",function(req,res)
+{
+
+    product.find({pgroup:"Kids"},function(err,found)
+    {
+        if(!err)
+        {
+            res.render("kids",{detail:found});
+        }
+    });
+
+});
 app.listen(process.env.PORT || 3000,function()
 {
     console.log("server started");
