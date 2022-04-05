@@ -143,7 +143,7 @@ header #menu-btn:hover {
 .services .services-box .box {
   display: flex;
   justify-content: space-between;
-  aling-items: center;
+  align-items: center;
   padding: 1rem 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   align-self: normal;
@@ -379,7 +379,7 @@ header #menu-btn:hover {
 }
 
 a:hover {
-  color: #fec503;
+  /* color: #fec503; */
   text-decoration: none;
 }
 
@@ -528,7 +528,14 @@ footer .quick-links {
 	font-size: 14px;
 	font-weight: bold;
 }
-
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: white;
+}
 
 </style>
 </head>
@@ -543,6 +550,7 @@ footer .quick-links {
         <a href="#services">services</a>
         <a href="#about">about us</a>
         <a href="#contact">contact</a>
+        <a href="/" style="text-decoration: none;">Logout</a>
       </nav>
       
       <div id="menu-btn" class="fa-solid fa-bars fa-2x">
@@ -687,12 +695,12 @@ footer .quick-links {
       <span class="carousel-control-next-icon"></span>
     </a>
   </div>
-  <!-- carosel2 -->
+  <!-- carosel2 ending  -->
   <!-- contact -->
-  <section class="container mt-5">
+  <section class="container-fluid">
     <!--Contact heading-->
-    <div class="row">
-       <div class="col-sm-12 text-center mb-4">
+    <div class="row contact">
+       <div class="col-sm-12 text-center mb-4 border-right-1">
 
       </div>
        <!--Grid column-->
@@ -700,7 +708,7 @@ footer .quick-links {
           <!--Form with header-->
           <div class="card border-primary rounded-0">
              <div class="card-header p-0">
-                <div class="bg-primary text-white text-center py-2">
+                <div class="bg-primary text-white text-center py-2" >
                    <h3><i class="fa fa-envelope"></i> Write to us:</h3>
                    <p class="m-0">We’ll write rarely, but only the best content.</p>
                 </div>
@@ -752,15 +760,15 @@ footer .quick-links {
           <div class="row text-center">
              <div class="col-md-4">
                 <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-map-marker"></i></a>
-                <p> Your Address ….. </p>
+                <p></p>
              </div>
              <div class="col-md-4">
                 <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-phone"></i></a>
-                <p>+91- 90000000</p>
+                <p></p>
              </div>
              <div class="col-md-4">
                 <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-envelope"></i></a>
-                <p> your@gmail.com</p>
+                <p></p>
              </div>
           </div>
        </div>
@@ -777,10 +785,10 @@ footer .quick-links {
               <span class="footer-title">Product</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Product 1</a>
+              <a class="nav-link" href="#">Mens</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Product 2</a>
+              <a class="nav-link" href="#">Womens</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Plans & Prices</a>
@@ -798,9 +806,9 @@ footer .quick-links {
             <li class="nav-item">
               <a class="nav-link" href="#">About us</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">Job postings</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="#">News and articles</a>
             </li>
@@ -812,7 +820,7 @@ footer .quick-links {
               <span class="footer-title">Contact & Support</span>
             </li>
             <li class="nav-item">
-              <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
+              <span class="nav-link"><i class="fas fa-phone"></i>+91 7708222005</span>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>
