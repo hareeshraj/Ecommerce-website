@@ -264,6 +264,22 @@ app.get("/mens",function(req,res)
    
 
 });
+app.post("/search",function(req,res)
+{
+    var size=req.body.size;
+    var price1=req.body.price1;
+    var price2=req.body.price2;
+
+    console.log(size+""+price1+""+price2);
+    product.find({price:{$gte:price1,$lte:price2},pgroup:"Mens",size:size},function(err,found)
+    {
+        if(!err)
+        {
+            res.render("mens",{detail:found});
+        }
+    });
+
+});
 
 app.get("/womens",function(req,res)
 {
@@ -276,10 +292,42 @@ app.get("/womens",function(req,res)
     });
 
 });
+app.post("/womensearch",function(req,res)
+{
+    var size=req.body.size;
+    var price1=req.body.price1;
+    var price2=req.body.price2;
+
+    console.log(size+""+price1+""+price2);
+    product.find({price:{$gte:price1,$lte:price2},pgroup:"Womens",size:size},function(err,found)
+    {
+        if(!err)
+        {
+            res.render("womens",{detail:found});
+        }
+    });
+
+});
 app.get("/kids",function(req,res)
 {
 
     product.find({pgroup:"Kids"},function(err,found)
+    {
+        if(!err)
+        {
+            res.render("kids",{detail:found});
+        }
+    });
+
+});
+app.post("/kidssearch",function(req,res)
+{
+    var size=req.body.size;
+    var price1=req.body.price1;
+    var price2=req.body.price2;
+
+    console.log(size+""+price1+""+price2);
+    product.find({price:{$gte:price1,$lte:price2},pgroup:"Kids",size:size},function(err,found)
     {
         if(!err)
         {

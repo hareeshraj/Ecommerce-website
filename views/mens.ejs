@@ -587,12 +587,16 @@ footer .quick-links {
 <body>
     
     <header class="header" id="header">
-        <a href="#header" class="logo" style="text-decoration: none;"><i class="fas fa-mask" ></i>The Fashioner</a>
-       
+        <a href="#header" class="logo" style="text-decoration: none;" ><i class="fas fa-mask" ></i>The Fashioner</a>
+          
+        
+      
         
         <nav class="nave">
-          <a href="/home" style="text-decoration: none;">home</a>
-          <a href="#services" style="text-decoration: none;">Filter</a>
+          <a href="/home" style="text-decoration: none;">Home</a>
+          <a href="/mens" style="text-decoration: none;">Mens</a>
+          <a href="#about"  data-toggle="modal" data-target="#myModal" style="text-decoration: none;">Filter</a>
+  
           <a href="/" style="text-decoration: none;">Logout</a>
         </nav>
         
@@ -740,6 +744,87 @@ footer .quick-links {
       </div>
     </div>
   </footer>
+
+
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center">Filter</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <!-- adding Bootstrap Form here -->
+
+                <form id="myForm" class="needs-validation" action="/search"  method="post" >
+                    <div class="container">
+
+                        <div class="form-group row">
+                            
+                            <div class="input-group col-sm-12">
+                              <div class="input-group-prepend">
+                               
+                              </div>
+                              <select name="size" class="form-control" id="sel1" placeholder="Size">
+                                <option default>--Size--</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                              </select>
+                              <div class="invalid-feedback">
+                                Please choose a username.
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            
+                              <div class="col-sm-12">
+                                  <input type="text" class="form-control" id="name_id" name="price1"
+                                      placeholder="Min-price" required />
+                                      <div class="invalid-feedback">
+                                          Please choose a Name.
+                                        </div>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name_id" name="price2"
+                                    placeholder="Max-price" required />
+                                    <div class="invalid-feedback">
+                                        Please choose a Name.
+                                      </div>
+                            </div>
+                        </div>
+
+                         <div class="text-center">
+                         <button class="btn btn-success" type="submit">Filter</button>
+                         </div>
+                    </div>
+                </form>
+
+                <script>
+                   
+                </script>
+            </div>
+
+            <!-- Modal footer
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div> -->
+
+        </div>
+    </div>
+</div>
 
 
 </body>
